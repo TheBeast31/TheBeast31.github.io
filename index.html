@@ -8,6 +8,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
 <style>
   body {
   background-repeat:no-repeat;
@@ -121,7 +143,9 @@ a.one:hover,a.one:active {
   <center>
 <hr class="new4">
   <br>
-    <video controls width="700" height="400" loop autoplay>
+     <button onclick="playPause()">Play/Pause</button> 
+    <br><br>
+    <video id="video1" width="700" height="400" loop autoplay>
     <source src="XYLEM INDUSTRIES.mp4" type="video/mp4">
   </video>
 <center>
