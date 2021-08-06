@@ -8,6 +8,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script> 
 <style>
   body {
   background-repeat:no-repeat;
@@ -121,8 +143,11 @@ a.one:hover,a.one:active {
   <center>
 <hr class="new4">
   <br>
-  <iframe width="55%" height="400px" src="https://www.youtube.com/embed/ESeROUDyjQU?autoplay=1&mute=1&loop=1&rel=0&controls=0&showinfo=0">
-    </iframe>
+    <video id="video1" width="420">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
 <center>
   <br>
     <div class="p">
