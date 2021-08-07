@@ -10,7 +10,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</script>
 <style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+  width: 93%;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
 .button {
   display: inline-block;
   border-radius: 4px;
@@ -50,8 +186,13 @@
   opacity: 1;
   right: 0;
 }
+body {
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-image: url('https://images.unsplash.com/photo-1519933045055-2e2d61a64bcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDB8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
+}
 hr.new4 {
- border: 1px solid black;
+ border: 1px solid white;
  width:90%;
 }
 img{
@@ -80,10 +221,10 @@ font-family:Trebuchet MS;
 </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/about.html">XYLEM INDUSTRIES</a>
+     <a class="navbar-brand" href="/about.html">XYLEM INDUSTRIES</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/index.html">Home</a></li>
@@ -102,9 +243,9 @@ font-family:Trebuchet MS;
           <li><a href="/about.html">About</a></li>
           <li><a href="/review.html">Review</a></li>
           <li><a href="/contactus.html">Contact Us</a></li>
-<li><a href="/help.html">Help</a></li>
+<li class="active"><a href="#">Help</a></li>
 <li><a href="/termsandconditions.html">Terms and Conditions</a></li>
-        </ul>	
+        </ul>
       </li>
     </ul>
 <form class="navbar-form navbar-right" action="/search.html">
@@ -119,45 +260,62 @@ font-family:Trebuchet MS;
 </form>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li class="active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="/login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
 <center>
-<width="600px" style="font-size:50px;font-family:Trebuchet MS;"><font color="#428bca">XYLEM </font><font color="#000"> INDUSTRIES</font>
+<width="600px" style="font-size:50px;font-family:Trebuchet MS;"><font color="#428bca">XYLEM </font><font color="white"> INDUSTRIES</font>
 </center>
 <center>
 <hr class="new4">
-<form class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
-<h2 class="w3-center">LOGIN</h2>
- 
-<div class="w3-row w3-section">
-  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-    <div class="w3-rest">
-      <input class="w3-input w3-border" name="first" type="text" placeholder="Username">
-    </div>
-</div>
+<div class="container">
+  <form action="/Home.html">
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
 
-<div class="w3-row w3-section">
-  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
-    <div class="w3-rest">
-      <input class="w3-input w3-border" name="message" type="password" placeholder="Password">
+      <div class="col">
+        <a href="/Home.html" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="/Home.html" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="/Home.html" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+      
     </div>
+  </form>
 </div>
-<div class="bottom_up">
-<div>
-<table>
-<tr>
-<td width="25px"></td>
-<td colspan="1"><button class="button" style="vertical-align:middle"><span>LOGIN</span></button>
-</tr>
-</table>
+<div class="bottom-container" "width:60%">
+  <div class="row" "width:60%">
+    <div class="col" "width:60%">
+      <a href="/app.html" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="/app.html" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
 </div>
-</div>
-</center>
-<center>
 <hr class="new4">
-<img src="https://economictimes.indiatimes.com/thumb/msid-74454275,width-1200,height-900,resizemode-4,imgsize-68343/login-page-getty.jpg?from=mdr">
+<video controls width="700" height="400" loop autoplay>
+    <source src="XYLEM INDUSTRIES.mp4" type="video/mp4">
+  </video>
 </center>
 <center>
 <hr class="new4">
